@@ -35,6 +35,7 @@ final Dio _dio = Dio(
       return await _dio.get(endpoint, queryParameters: queryParams,);
     } on DioError catch (e) {
       _handleDioError(e);
+
        //Utils().showToastMessage("$e");
       return null;
     } catch (e) {
