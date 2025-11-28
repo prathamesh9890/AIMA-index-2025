@@ -32,6 +32,7 @@ final Dio _dio = Dio(
   Future<Response?> getRequest(String endpoint, {Map<String, dynamic>? queryParams}) async {
    log('${endpoint}');
     try {
+
       return await _dio.get(endpoint, queryParameters: queryParams,);
     } on DioError catch (e) {
       _handleDioError(e);
